@@ -19,7 +19,15 @@ router.get('/', function(req, res, next) {
   res.send("offers");
 });
 
-router.get('/:param', async function(req, res, next) {
+router.get('/offers/:offerId', async function(req, res, next) {
+  let result = "Can't find offer with ID " + req.params.offerId;
+  if(fs.existsSync(path.join("./public/offers", req.params.offerId))) {
+    result = fs.readFileSync("index.html", "UTF-8");
+  }
+  res.send(result);
+});
+
+router.get('/offers/:offerId/:param', async function(req, res, next) {
   var result = [];
   var data = [];
   var map = {};
@@ -54,12 +62,12 @@ router.get('/:param', async function(req, res, next) {
       result = _.filter(result, { 'itemId': req.query.itemId });
       result = { data: result};
       break;
-    default:
-      if(fs.existsSync(path.join("./public/offers", req.params.param))) {
-        result = fs.readFileSync("index.html", "UTF-8");
-      } else {
-        result = "offers";
-      }
+      default:
+        if(fs.existsSync(path.join("./public/offers", req.params.offerId))) {
+          result = fs.readFileSync("index.html", "UTF-8");
+        } else {
+          result = "offers";
+        }
   }
   res.send(result);
 });

@@ -117,7 +117,8 @@ function render() {
     layout
   );
 
-  var offerId = window.location.pathname.replace("/","");
+  const paths = window.location.pathname.split("/");
+  var offerId = paths[2];
 
   var folders = $$("Folders");
   folders.load("folders?offerId=" + offerId, "json");
