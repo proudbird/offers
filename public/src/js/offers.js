@@ -109,7 +109,7 @@ const layout = {
 }
 
 function img(obj) {
-  return "<div style='background-image: url(\"offers/img/" + obj.img + "\");' class='content'></div>";
+  return "<div style='background-image: url(\"../../offers/img/" + obj.img + "\");' class='content'></div>";
 }
 
 function render() {
