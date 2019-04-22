@@ -2,7 +2,7 @@ const layout = {
   rows: [{
       view: "template",
       template: "<h1>Прайс-лист</h1>",
-      height: 70
+      height: 50
     },
     {
       cols: [{
@@ -22,6 +22,7 @@ const layout = {
           //width: 700,
           select: true,
           gravity: 0.5,
+          resizeColumn: true,
           columns: [{
               id: "title",
               header: "Наименование",
@@ -38,7 +39,7 @@ const layout = {
             {
               id: "unit",
               header: "Ед. изм.",
-              width: 80,
+              width: 50,
               css: {
                 'text-align': 'center'
               }
@@ -46,7 +47,7 @@ const layout = {
             {
               id: "rest",
               header: "Остаток",
-              width: 80,
+              width: 60,
               css: {
                 'text-align': 'right'
               }
@@ -54,7 +55,7 @@ const layout = {
             {
               id: "price",
               header: "Цена без НДС",
-              width: 100,
+              width: 80,
               css: {
                 'text-align': 'right'
               },
@@ -65,7 +66,7 @@ const layout = {
             {
               id: "priceVAT",
               header: "Цена с НДС",
-              width: 100,
+              width: 80,
               css: {
                 'text-align': 'right'
               },
@@ -80,7 +81,7 @@ const layout = {
           view: "resizer"
         },
         {
-          gravity: 0.4,
+          gravity: 0.2,
           rows: [{
               view: "carousel",
               id: "Thumbnail",
