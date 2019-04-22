@@ -29,7 +29,8 @@
 }
 
 .webix_hcell {
-    line-height: 15px !important;
+    line-height: 12px !important;
+    font-weight: 200 !important;
     text-align: center;
     vertical-align: middle;
     display: table-cell;
