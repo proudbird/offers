@@ -2,7 +2,7 @@ const layout = {
   rows: [{
       view: "template",
       template: "<h1>Прайс-лист</h1>",
-      height: 50
+      height: 60
     },
     {
       cols: [{
@@ -81,7 +81,7 @@ const layout = {
           view: "resizer"
         },
         {
-          gravity: 0.2,
+          gravity: 0.3,
           rows: [{
               view: "carousel",
               id: "Thumbnail",
