@@ -60,7 +60,12 @@ const layout = {
                 'text-align': 'right'
               },
               format: function (value) {
-                return webix.i18n.numberFormat(value)
+                return webix.i18n.format(value, {
+                  groupDelimiter:" ",
+                  groupSize:3,
+                  decimalDelimiter:".",
+                  decimalSize:2
+              })
               }
             },
             {
@@ -71,7 +76,12 @@ const layout = {
                 'text-align': 'right'
               },
               format: function (value) {
-                return webix.i18n.numberFormat(value)
+                return webix.i18n.format(value, {
+                  groupDelimiter:" ",
+                  groupSize:3,
+                  decimalDelimiter:".",
+                  decimalSize:2
+              })
               }
             }
           ],
