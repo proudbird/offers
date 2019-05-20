@@ -60,7 +60,7 @@ const layout = {
                 'text-align': 'right'
               },
               format: function (value) {
-                return webix.i18n.format(value, {
+                return webix.Number.format(value, {
                   groupDelimiter:" ",
                   groupSize:3,
                   decimalDelimiter:".",
@@ -76,7 +76,7 @@ const layout = {
                 'text-align': 'right'
               },
               format: function (value) {
-                return webix.i18n.format(value, {
+                return webix.Number.format(value, {
                   groupDelimiter:" ",
                   groupSize:3,
                   decimalDelimiter:".",
